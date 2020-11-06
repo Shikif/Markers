@@ -23,16 +23,20 @@ Type.create([
         {
             title: 'Animals',
             public: true  
-        },{
+        },
+        {
             title: 'Tech',
             public: true  
-        },{
+        },
+        {
             title: 'IT',
             public: true  
-        },{
+        },
+        {
             title: 'Memes',
             public: true  
-        },{
+        },
+        {
             title: 'Games',
             public: true  
         },
@@ -54,13 +58,13 @@ Type.create([
         {
             title: 'Xbox',
             public: true,
-            category_id: 1
-        },
-        {
-            title: 'Perros',
-            public: true,
             category_id: 5
         },
+        {
+            title: 'Memazos',
+            public: true,
+            category_id: 4
+        }
         ])
 
 4.times do 
@@ -68,19 +72,19 @@ Type.create([
     {
         title:'Dancing cat',
         type_id: 1,
-        category_id: 1},
+        category_id: 8},
     {
         title:'Sexy dog',
         type_id: 2,
-        category_id: 1},
+        category_id: 6},
     {
         title:'Cat adoption center',
         type_id: 3,
-        category_id: 1},
+        category_id: 8},
     {
         title:'Feline behaviour',
         type_id: 4,
-        category_id: 1},   
+        category_id: 8},   
     {
             title:'Virtual reality in games',
             type_id: 1,

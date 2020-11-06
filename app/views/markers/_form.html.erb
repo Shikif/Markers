@@ -25,7 +25,7 @@
 
   
   <div class ="field">
-    <%= form.grouped_collection_select(:category_id, Category.order(:title), 
+    <%= form.grouped_collection_select(:category_id, Category.where(category_id:nil).order(:title), 
                           :subcategories, :title, :id, :title, 
                           include_blank: "Please Choose...") %>
   </div>
