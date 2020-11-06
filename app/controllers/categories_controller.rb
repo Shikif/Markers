@@ -27,7 +27,7 @@ end
   # GET /categories/new
   def new
     @category = Category.new
-    @category.category_id = (params[:id]) unless params[:id] ==nil 
+    @category.category_id = params[:id] unless params[:id].nil?
   end
 
   # GET /categories/1/edit

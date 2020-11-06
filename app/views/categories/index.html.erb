@@ -7,10 +7,20 @@
 <% if category.public? %>
   
 <tr>
-  <td><%= link_to category.title, category_path(category) %></td>
+  <td><h2><b><%= link_to category.title, category_path(category) %></b></h2></td>
+ 
+
   <td><%= link_to 'Edit', edit_category_path(category)  %></td>
   <td><%= link_to 'X', category_path(category), :confirm => 'Are you sure?', :method => :delete  %></td>
 </tr>
+   <% category.markers.each do |marker| %> 
+  <tr style="">
+      <td style= 'color:black;'>
+     <li ><%= link_to "#{marker.title}", marker_path(marker), style: 'color:black'%></li>
+     <li><%= marker.type.title%></li>
+     </td>
+  </tr>
+    <% end %>
 <% end %> 
 <% end %>
 </table>

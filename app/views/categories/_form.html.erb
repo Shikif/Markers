@@ -26,6 +26,9 @@
     <%=form.select :category_id, Category.where(category_id: nil).pluck(:title, :id),:prompt => 'Select'%>
   </div>
 
+
+  
+
   <div class="actions">
     <%= form.submit %>
   </div>

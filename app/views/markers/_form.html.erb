@@ -21,15 +21,15 @@
     <%= form.select :type_id, Type.pluck(:title, :id) %>
   </div>
 
-  <div class="field">
-    
+  
 
-    <%= form.label :category_id %>
-    <%=form.select :category_id, Category.where(category_id: nil).pluck(:title, :id)%>
-
-    
-
+  
+  <div class ="field">
+    <%= form.grouped_collection_select(:category_id, Category.order(:title), 
+                          :subcategories, :title, :id, :title, 
+                          include_blank: "Please Choose...") %>
   </div>
+
 
   <div class="actions">
     <%= form.submit %>
