@@ -6,8 +6,13 @@
 </p>
 
 <p>
-  <strong>Subcat:</strong>
-  <%= @category.subcat %>
+  <strong>Public:</strong>
+  <%= @category.public %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @category.parent %>
 </p>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |

@@ -1,0 +1,8 @@
+<tr id = markers>
+        <td><%= marker.title %></td>
+        <td><%= marker.type.title %></td>
+        <td><%= marker.category.title %></td>
+        <td><%= link_to 'Show', marker %></td>
+        <td><%= link_to 'Edit', edit_marker_path(marker) %></td>
+        <td><%= link_to 'Destroy', marker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>

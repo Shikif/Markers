@@ -14,7 +14,8 @@ class CategoriesTest < ApplicationSystemTestCase
     visit categories_url
     click_on "New Category"
 
-    fill_in "Subcat", with: @category.subcat
+    fill_in "Category", with: @category.category_id
+    check "Public" if @category.public
     fill_in "Title", with: @category.title
     click_on "Create Category"
 
@@ -26,7 +27,8 @@ class CategoriesTest < ApplicationSystemTestCase
     visit categories_url
     click_on "Edit", match: :first
 
-    fill_in "Subcat", with: @category.subcat
+    fill_in "Category", with: @category.category_id
+    check "Public" if @category.public
     fill_in "Title", with: @category.title
     click_on "Update Category"
 

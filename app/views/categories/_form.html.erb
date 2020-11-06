@@ -17,8 +17,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :subcat %>
-    <%= form.text_field :subcat %>
+    <%= form.label :public %>
+    <%= form.check_box :public %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_id %>
+    <%=form.select :category_id, Category.where(category_id: nil).pluck(:title, :id),:prompt => 'Select'%>
   </div>
 
   <div class="actions">

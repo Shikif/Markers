@@ -4,17 +4,30 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.all
+    def index
+      @category = nil
+      @categories = Category.where(category_id: nil)
+    end
+    
   end
 
   # GET /categories/1
   # GET /categories/1.json
-  def show
-  end
+  # Show subcategory
+def show
+  
+  @category = Category.find(params[:id])
+  
+  @categories = @category.subcategories
+ 
+  render :action => :index
+end
+
 
   # GET /categories/new
   def new
     @category = Category.new
+    @category.category_id = (params[:id]) unless params[:id] ==nil 
   end
 
   # GET /categories/1/edit
@@ -69,6 +82,6 @@ class CategoriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def category_params
-      params.require(:category).permit(:title, :subcat)
+      params.require(:category).permit(:title, :public, :category_id)
     end
 end

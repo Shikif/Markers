@@ -2,10 +2,6 @@
 
 one:
   title: MyString
-  public: false
-  category: one
 
 two:
   title: MyString
-  public: false
-  category: two
