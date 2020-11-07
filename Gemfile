@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
 
+
+gem 'pg', '~> 0.20.0'
 gem "chartkick"
 gem 'chart-js-rails', '~> 0.0.9'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
