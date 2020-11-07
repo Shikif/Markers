@@ -56,7 +56,7 @@ Type.create([
             category_id: 1
         },
         {
-            title: 'Xbox',
+            title: 'PC',
             public: true,
             category_id: 5
         },
@@ -88,7 +88,7 @@ Type.create([
     {
             title:'Virtual reality in games',
             type_id: 1,
-            category_id: 5}
+            category_id: 9}
     
     
     

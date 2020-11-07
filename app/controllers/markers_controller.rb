@@ -32,6 +32,7 @@ class MarkersController < ApplicationController
       if @marker.save
         format.html { render :index, notice: 'Marker was successfully created.' }
         format.json { render :show, status: :created, location: @marker }
+        format.js {@marker}
       else
         format.html { render :new }
         format.json { render json: @marker.errors, status: :unprocessable_entity }

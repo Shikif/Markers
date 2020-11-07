@@ -7,6 +7,9 @@ class CategoriesController < ApplicationController
     def index
       @category = nil
       @categories = Category.where(category_id: nil)
+      @chart = Category.joins(:markers).group(:title).count
+      #IceCreams.joins(added_extras: :extra).group('extras.name').count
+
     end
     
   end
@@ -19,7 +22,8 @@ def show
   @category = Category.find(params[:id])
   
   @categories = @category.subcategories
- 
+  
+
   render :action => :index
 end
 
@@ -84,4 +88,7 @@ end
     def category_params
       params.require(:category).permit(:title, :public, :category_id)
     end
+
+    
+      
 end
